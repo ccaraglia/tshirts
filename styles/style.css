@@ -40,6 +40,7 @@
     width:20%;
     text-align:center;
     border: 1px #59ABE3 solid;
+    position: relative;
 }
 
 .iconBar:hover{
@@ -70,43 +71,60 @@ span{
     color:white;
 }
 
+#sizesContainer:hover > p{
+    color:white;
+}
+
 .sizes{
     position:absolute;
-    top:-415%;
-    left:40%;
     border: 1px #59ABE3 solid;
-   /* text-align: center; */
-    height:367%;
-    width: 20%;
+    visibility: hidden;
     opacity: 0;
+    bottom: 50px;
+    left: 0;
+    max-width: 100%;
 }
 
 .colors{
     position:absolute;
-    top:-225%;
-    left:60%;
     border: 1px #59ABE3 solid;
    /* text-align: center; */
    /* width:20%; */
-   height:180%;
-   width: 20%;
+    visibility:; hidden;
     opacity: 0;
+    bottom: 50px;
+    left: 0;
+    max-width: 100%;
 }
 
-.purchaseBar > div:nth-child(3):hover ~ .sizes {
+#sizesContainer:hover > img {
+  visibility: visible;
   opacity:1;
-  transition: 1s transform ease;
-  transform: translate(0px,10px);
+  transition: 1s all ease;
+  bottom: 22px;
 }
 
-.purchaseBar > div:nth-child(4):hover ~ .colors {
+#colorsContainer:hover > img {
+  visibility: visible;
   opacity:1;
-  transition: 1s transform ease;
-  transform: translate(0px,10px);
+  transition: 1s all ease;
+  bottom: 22px;
 }
 
 @media screen and (max-width: 700px){
 .shirtCol {
-    display:block ;
+    display:inline-block;
+    width: 40%;
+    margin:1%;
+   /* margin: 0 auto;*/
   }
 }
+
+@media screen and (max-width: 500px){
+.shirtCol {
+    display:block;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
